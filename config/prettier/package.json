@@ -1,0 +1,16 @@
+{
+  "name": "@e-commerce-double-db/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-classnames": "^0.7.8",
+    "prettier-plugin-merge": "^0.7.4",
+    "prettier-plugin-tailwindcss": "^0.6.12"
+  }
+}
