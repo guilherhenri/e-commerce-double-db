@@ -1,0 +1,10 @@
+{
+  "extends": "@e-commerce-double-db/tsconfig/node",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
