@@ -1,16 +1,12 @@
-import * as tailwindcssPlugin from 'prettier-plugin-tailwindcss'
 import classnamesPlugin from 'prettier-plugin-classnames'
 import mergePlugin from 'prettier-plugin-merge'
+import * as tailwindcssPlugin from 'prettier-plugin-tailwindcss'
 
 /** @typedef {import('prettier').Config} PrettierConfig */
 
 /** @type { PrettierConfig } */
 export const config = {
-  plugins: [
-    tailwindcssPlugin,
-    classnamesPlugin,
-    mergePlugin
-  ],
+  plugins: [tailwindcssPlugin, classnamesPlugin, mergePlugin],
   printWidth: 80,
   tabWidth: 2,
   useTabs: false,

@@ -21,6 +21,7 @@ export default {
     'scope-case': [2, 'always', 'lower-case'],
   },
   ignores: [
-    (message) => message.includes('[skip ci]') || message.includes('chore(release)'),
+    (message) =>
+      message.includes('[skip ci]') || message.includes('chore(release)'),
   ],
 }
