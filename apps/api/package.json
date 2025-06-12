@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/http/server.ts",
     "build": "tsup src --out-dir dist",
@@ -13,6 +14,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
+    "@e-commerce-double-db/eslint": "workspace:*",
     "tsup": "^8.5.0",
     "tsx": "^4.20.2"
   }
