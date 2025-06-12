@@ -56,6 +56,9 @@ importers:
       fastify:
         specifier: ^5.3.3
         version: 5.3.3
+      zod:
+        specifier: ^3.25.63
+        version: 3.25.63
     devDependencies:
       '@e-commerce-double-db/eslint':
         specifier: workspace:*
@@ -63,6 +66,9 @@ importers:
       '@e-commerce-double-db/tsconfig':
         specifier: workspace:*
         version: link:../../config/tsconfig
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
       tsup:
         specifier: ^8.5.0
         version: 8.5.0(jiti@2.4.2)(tsx@4.20.2)(typescript@5.8.2)(yaml@2.8.0)
@@ -1305,6 +1311,10 @@ packages:
 
   dotenv@16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+
+  dotenv@16.5.0:
+    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -3539,6 +3549,9 @@ packages:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
+  zod@3.25.63:
+    resolution: {integrity: sha512-3ttCkqhtpncYXfP0f6dsyabbYV/nEUW+Xlu89jiXbTBifUfjaSqXOG6JnQPLtqt87n7KAmnMqcjay6c0Wq0Vbw==}
+
 snapshots:
 
   '@babel/code-frame@7.27.1':
@@ -4758,6 +4771,8 @@ snapshots:
       is-obj: 2.0.0
 
   dotenv@16.0.3: {}
+
+  dotenv@16.5.0: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -7184,3 +7199,5 @@ snapshots:
   yocto-queue@1.2.1: {}
 
   yoctocolors@2.1.1: {}
+
+  zod@3.25.63: {}
