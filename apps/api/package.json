@@ -2,8 +2,6 @@
   "name": "@e-commerce-double-db/api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "tsx watch src/http/server.ts",
     "build": "tsup src --out-dir dist",
@@ -16,13 +14,17 @@
   "devDependencies": {
     "@e-commerce-double-db/eslint": "workspace:*",
     "@e-commerce-double-db/tsconfig": "workspace:*",
+    "@types/pg": "^8.15.4",
     "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.31.1",
     "tsup": "^8.5.0",
     "tsx": "^4.20.2"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "drizzle-orm": "^0.44.2",
     "fastify": "^5.3.3",
+    "pg": "^8.16.0",
     "zod": "^3.25.63"
   }
 }
