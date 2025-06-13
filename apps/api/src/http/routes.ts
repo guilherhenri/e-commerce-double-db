@@ -14,6 +14,11 @@ import { deleteProduct } from './controllers/products/delete-product'
 import { getProduct } from './controllers/products/get-product'
 import { listProducts } from './controllers/products/list-products'
 import { updateProduct } from './controllers/products/update-product'
+import { createReview } from './controllers/reviews/create-review'
+import { deleteReview } from './controllers/reviews/delete-review'
+import { getProductReviews } from './controllers/reviews/get-product-reviews'
+import { getReview } from './controllers/reviews/get-review'
+import { updateReview } from './controllers/reviews/update-review'
 import { deleteUser } from './controllers/users/delete'
 import { listUsers } from './controllers/users/list'
 import { profile } from './controllers/users/profile'
@@ -43,4 +48,10 @@ export async function routes(app: FastifyInstance) {
   app.get('/orders/:id', getOrder)
   app.post('/orders', createOrder)
   app.patch('/orders/:id/status', updateOrderStatus)
+
+  app.get('/reviews/product/:productId', getProductReviews)
+  app.get('/reviews/:id', getReview)
+  app.post('/reviews', createReview)
+  app.put('/reviews/:id', updateReview)
+  app.delete('/reviews/:id', deleteReview)
 }
