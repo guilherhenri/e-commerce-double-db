@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/guilherhenri/e-commerce-double-db/compare/v1.2.0...v1.3.0) (2025-06-13)
+
+
+### Features
+
+* **reviews:** create delete review controller ([5e2d798](https://github.com/guilherhenri/e-commerce-double-db/commit/5e2d7986901d09f18d9c3f97a8092b43f9717eee))
+* **reviews:** create get product reviews controller ([d9c8391](https://github.com/guilherhenri/e-commerce-double-db/commit/d9c839166cc60f0a1c32f702e454474611fc5894))
+* **reviews:** create get review controller ([4c42fd8](https://github.com/guilherhenri/e-commerce-double-db/commit/4c42fd88f0931be5cfb107feedafae60b116ec32))
+* **reviews:** create product review controller ([51de912](https://github.com/guilherhenri/e-commerce-double-db/commit/51de9124d55c4a326a976ae956056415caf0f4f6))
+* **reviews:** create update review controller ([04f838a](https://github.com/guilherhenri/e-commerce-double-db/commit/04f838adc6e01a90a5fc070811bdb6249c0bf24d))
+* **routing:** add product review management routes ([9d0746b](https://github.com/guilherhenri/e-commerce-double-db/commit/9d0746b92cdf7c932029d8ff1149539a14588c8e))
+
 # [1.2.0](https://github.com/guilherhenri/e-commerce-double-db/compare/v1.1.0...v1.2.0) (2025-06-13)
 
 
