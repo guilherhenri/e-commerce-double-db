@@ -1,0 +1,681 @@
+type: collection.insomnia.rest/5.0
+name: E-commerce Double DB - API Collection
+meta:
+  id: wrk_c46e3424dd424bf6a808b362dce827cf
+  created: 1728494564871
+  modified: 1749820737937
+  description: ""
+collection:
+  - name: Users
+    meta:
+      id: fld_aad624de1df847abb6b8f2a219cf2058
+      created: 1749480626559
+      modified: 1749811850632
+      sortKey: -1749753072931
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/users"
+        name: Create User
+        meta:
+          id: req_de70724254f046c68b66cf7255d5a56f
+          created: 1749480626560
+          modified: 1749747882323
+          isPrivate: false
+          description: ""
+          sortKey: -1749480594126
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Guilherme Henrique",
+            	"email": "guilherhenri12@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/10.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users"
+        name: List Users
+        meta:
+          id: req_dcb4c33f39194c169cad32d4fcf076ad
+          created: 1749480626561
+          modified: 1749481869539
+          isPrivate: false
+          description: ""
+          sortKey: -1749480594326
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/10.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/59b01168-5f7c-4199-94ee-34985cc0f190/profile"
+        name: Get User
+        meta:
+          id: req_e2b4477031cc4542b53b5f450c4eb4bf
+          created: 1749480626562
+          modified: 1749749300166
+          isPrivate: false
+          description: ""
+          sortKey: -1749480594226
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/10.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/{{ _.user_id }}"
+        name: Update User
+        meta:
+          id: req_6efd6500be0b4c30b4dbdd0d284c63f9
+          created: 1749749675347
+          modified: 1749749847802
+          isPrivate: false
+          description: ""
+          sortKey: -1749270652189
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Guilherme Henrique",
+            	"email": "guilherhenri12@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/10.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/{{ _.user_id }}"
+        name: Delete User
+        meta:
+          id: req_7c4924a304774e8eac0c50925e7d5279
+          created: 1749750297301
+          modified: 1749750306739
+          isPrivate: false
+          description: ""
+          sortKey: -1749165681220.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/10.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categories
+    meta:
+      id: fld_9e0b8466acfe4d548dbb48caccb61cf7
+      created: 1749753072831
+      modified: 1749753072831
+      sortKey: -1749753072831
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/categories"
+        name: Create
+        meta:
+          id: req_5eed226975864869adc9fec7b8b5dbd7
+          created: 1749753076028
+          modified: 1749753124209
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076028
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Limpeza"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories"
+        name: List
+        meta:
+          id: req_1daa9dab728e459c9efd80037f8b148d
+          created: 1749753259907
+          modified: 1749753412033
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076128
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/{{ _.category_id }}"
+        name: Get By Id
+        meta:
+          id: req_b4e662f9dec54912b88ac36664648386
+          created: 1749753418062
+          modified: 1749753422644
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076078
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/{{ _.category_id }}"
+        name: Update
+        meta:
+          id: req_397d88d4ba604a7ea6818bcbe4ffbe27
+          created: 1749753606575
+          modified: 1749753618293
+          isPrivate: false
+          description: ""
+          sortKey: -1749616835177
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Cozinha"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/585dd29e-85d0-4ec6-995a-b2ac4b1ad97d"
+        name: Delete
+        meta:
+          id: req_481e19da0da04376b34b1a5925656ed2
+          created: 1749753749742
+          modified: 1749753759452
+          isPrivate: false
+          description: ""
+          sortKey: -1749548714751.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Products
+    meta:
+      id: fld_8c5489fd95d0485882a0c439f11d0b42
+      created: 1749761072739
+      modified: 1749761072739
+      sortKey: -1749502802766
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/products"
+        name: Create
+        meta:
+          id: req_835d7a9143404601bdc7500f36359e2b
+          created: 1749761072743
+          modified: 1749812277524
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076028
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Prato",
+            	"description": "Porcelana",
+            	"price": 7.80,
+            	"categoryId": "{{ _.category_id }}",
+            	"stock": 3
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products"
+        name: List
+        meta:
+          id: req_804e235517b244ddb6605acd901aa44e
+          created: 1749761072745
+          modified: 1749761589992
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076128
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.product_id }}"
+        name: Get By Id
+        meta:
+          id: req_1004607f779641ef8e41726b019f44bf
+          created: 1749761072746
+          modified: 1749762256381
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076078
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.product_id }}"
+        name: Update
+        meta:
+          id: req_861d961cc9e641359ec502eccaa379d4
+          created: 1749761072758
+          modified: 1749762964800
+          isPrivate: false
+          description: ""
+          sortKey: -1749616835177
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Panela",
+            	"description": "Anti aderente",
+            	"price": 99.90,
+            	"categoryId": "{{ _.category_id }}",
+            	"stock": 8
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/588c1251-c346-4cf5-abfa-c2765fe0dd97"
+        name: Delete
+        meta:
+          id: req_0a3a5caa8e804531bf3516ebc6026445
+          created: 1749761072763
+          modified: 1749763123157
+          isPrivate: false
+          description: ""
+          sortKey: -1749548714751.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Orders
+    meta:
+      id: fld_fc289ad25d584d47880a8544d4e740a5
+      created: 1749811640671
+      modified: 1749811640671
+      sortKey: -1749377667733.5
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/orders"
+        name: Create
+        meta:
+          id: req_c600b9ffddc94d499df3c48358dff50b
+          created: 1749811640673
+          modified: 1749819026603
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076028
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"userId": "{{ _.user_id }}",
+            	"totalAmount": 200,
+            	"shippingAddress": "São Paulo, SP - Brasil",
+            	"items": [
+            		{ 
+            			"productId": "{{ _.product_id }}", 
+            			"quantity": 2, 
+            			"price": 75 
+            		},
+            		{ 
+            			"productId": "0901ea0b-e47d-49bf-a3a6-624d45364387", 
+            			"quantity": 1, 
+            			"price": 10 
+            		}
+            	],
+            	"paymentMethod": "pix"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders"
+        name: List
+        meta:
+          id: req_235fba3e05614cd7b77cc4debd41a5dc
+          created: 1749811640675
+          modified: 1749813902278
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076128
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/7bae8978-8a2a-462c-bfe0-640bb0aecee2"
+        name: Get By Id
+        meta:
+          id: req_824871ed57a441f6a42c41f11d12053b
+          created: 1749811640676
+          modified: 1749814911878
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076078
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/976c3f37-c9df-43da-b7c3-79e9b848fc26/status"
+        name: Update
+        meta:
+          id: req_65e0affb67b141e8885593caa0b2e79b
+          created: 1749811640677
+          modified: 1749819066477
+          isPrivate: false
+          description: ""
+          sortKey: -1749616835177
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"status": "delivered"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Reviews
+    meta:
+      id: fld_ba7d71bc25604800a04a4d845b9e0cf0
+      created: 1749818470244
+      modified: 1749818470244
+      sortKey: -1748516919841.25
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/reviews"
+        name: Create
+        meta:
+          id: req_96024ea6b04e4577819c1de4ae61d739
+          created: 1749818470250
+          modified: 1749818998830
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076028
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"userId": "{{ _.user_id }}",
+            	"productId": "{{ _.product_id }}",
+            	"title": "Muito bom",
+            	"comment": "Melhor do que eu esperava",
+            	"rating": 5
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/reviews/product/{{ _.product_id }}"
+        name: List
+        meta:
+          id: req_a7dc9c391db94b2481ea7d7e5c5d4b3e
+          created: 1749818470254
+          modified: 1749819373965
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076128
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/reviews/684c1ec29e6296e87aa8a5ba"
+        name: Get By Id
+        meta:
+          id: req_9362e0ed38344ccea511f53a31d2c95d
+          created: 1749818470255
+          modified: 1749820544576
+          isPrivate: false
+          description: ""
+          sortKey: -1749753076078
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/reviews/684c1ec29e6296e87aa8a5ba"
+        name: Update
+        meta:
+          id: req_4534ba5989fc43c3a1863d32dcba58a7
+          created: 1749818470256
+          modified: 1749820597685
+          isPrivate: false
+          description: ""
+          sortKey: -1749616835177
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "Muito bom",
+            	"comment": "Melhor do que eu esperava",
+            	"rating": 4
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/reviews/684c1ec29e6296e87aa8a5ba"
+        name: Delete
+        meta:
+          id: req_d2c36ea59ab843a3a95ff43798df156e
+          created: 1749820689345
+          modified: 1749820694971
+          isPrivate: false
+          description: ""
+          sortKey: -1749582774964.25
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_667a98228b98bcf7084b745b4ce8bf951cf04385
+    created: 1728494564875
+    modified: 1730219272177
+environments:
+  name: Base Environment
+  meta:
+    id: env_667a98228b98bcf7084b745b4ce8bf951cf04385
+    created: 1728494564873
+    modified: 1749811845241
+    isPrivate: false
+  data:
+    base_url: http://localhost:3333/api/v1
+    user_id: 75738db9-2a8f-488f-bd4f-92687c7107d3
+    category_id: 527c80f4-26b3-413f-ba06-c9b7d063513f
+    product_id: d677b2c3-e995-46dd-a588-aaa55355f15d
