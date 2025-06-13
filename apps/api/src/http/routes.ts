@@ -5,6 +5,10 @@ import { deleteCategory } from './controllers/categories/delete-category'
 import { getCategory } from './controllers/categories/get-category'
 import { listCategories } from './controllers/categories/list-categories'
 import { updateCategory } from './controllers/categories/update-category'
+import { createOrder } from './controllers/orders/create-order'
+import { getOrder } from './controllers/orders/get-order'
+import { listOrders } from './controllers/orders/list-orders'
+import { updateOrderStatus } from './controllers/orders/update-order-status'
 import { createProduct } from './controllers/products/create-product'
 import { deleteProduct } from './controllers/products/delete-product'
 import { getProduct } from './controllers/products/get-product'
@@ -34,4 +38,9 @@ export async function routes(app: FastifyInstance) {
   app.post('/products', createProduct)
   app.put('/products/:id', updateProduct)
   app.delete('/products/:id', deleteProduct)
+
+  app.get('/orders', listOrders)
+  app.get('/orders/:id', getOrder)
+  app.post('/orders', createOrder)
+  app.patch('/orders/:id/status', updateOrderStatus)
 }
